@@ -1,10 +1,18 @@
-const CounterReducer = (data = 0, action) => {
+let INITIAL_STATE = {
+    count: 0
+}
+const CounterReducer = (state = INITIAL_STATE, action) => {
     console.log('INSIDE REDUCER..')
+    let newState = {...state}
     switch (action.type){
         case 'INCREMENT':
-            return data+1;
+             newState.count++;
+             return newState;
         case 'DECREMENT':
-            return data-1;    
+            newState.count--;
+            return newState; 
+        default:
+            return state;       
     }
 }
 

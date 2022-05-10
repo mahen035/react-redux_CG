@@ -5,7 +5,7 @@ import {increment, decrement} from './actions/CounterAction';
 import {useState} from 'react';
 
 function App() {
-   const counter = useSelector(state => state)
+   const data = useSelector(state => state)
 
 // const color = useSelector(state => state)
   let dispatch = useDispatch();
@@ -28,7 +28,7 @@ function App() {
         <input type='radio' name="favColor" value= "Green" onClick={handleClick}/>Green
  */}
 
-          <h2>Counter: {counter}</h2>
+          <h2>Counter: {data.count}</h2>
           <button onClick={() => dispatch(increment())}>INCREMENT</button>
           <button onClick={() => dispatch(decrement())}>DECREMENT</button>
     </div>
