@@ -10,7 +10,7 @@ const CounterReducer = (state = INITIAL_STATE, action) => {
              return newState;
         case 'DECREMENT':
             newState.count--;
-            return newState; 
+             return newState; 
         default:
             return state;       
     }
