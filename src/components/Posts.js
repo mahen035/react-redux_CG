@@ -15,7 +15,22 @@ function Posts(props) {
         <div>
             <h2>Fetch data from API...</h2>
             <p>
-                {titles}
+                <table border="1">
+                    <tr>
+                        <th>BODY</th>
+                        <th>ID</th>
+                        <th>TITLE</th>
+                        <th>USER ID</th>
+                    </tr>
+                    {data ? data.map((val) => (
+                        <tr key={val.id}>
+                            <td>{val.body}</td>
+                            <td>{val.id}</td>
+                            <td>{val.title}</td>
+                            <td>{val.userId}</td>
+                        </tr>
+                    )):'No Data Found'}
+                </table>
             </p>
         </div>
     );
