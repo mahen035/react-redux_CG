@@ -8,7 +8,7 @@ import fetchPostsReducer from '../reducers/fetchPostsReducer'
 import thunk from 'redux-thunk'
 
 export default configureStore({
-  reducer: fetchPostsReducer,
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(myLogger).concat(thunk),
+  reducer: CounterReducer,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(myLogger),//.concat(thunk),
   devTools: [composeWithDevTools]
 })

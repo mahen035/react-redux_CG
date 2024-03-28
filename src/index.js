@@ -16,7 +16,8 @@ console.log('CREATING THE STORE..')
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store = {store}>
-    <Posts />
+    {/* <Posts /> */}
+    <App />
   </Provider>
 );
 
